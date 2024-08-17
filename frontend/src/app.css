@@ -1,0 +1,99 @@
+/* src/index.css or src/app.css */
+body {
+  @apply bg-gray-100 dark:bg-gray-900;
+  transition: background-color 0.3s;
+}
+
+/* for smaller screens */
+/* .pages {
+  padding: 0 16px;
+} */
+
+.total-jobs-container {
+  background-color: lightyellow; /* White background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  border: 1px solid #e5e7eb; /* Light border to separate from background */
+  padding: 1rem; /* Add padding inside the container */
+  margin-bottom: 1.5rem; /* Space below the container */
+  max-width: 1280px; /* Ensure container width matches your design */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.total-jobs-container h2 {
+  color: #374151; /* Dark gray color for text */
+}
+
+.total-jobs-container .text-blue-500 {
+  color: #3b82f6; /* Blue color to highlight the number of jobs */
+}
+
+/* Styles for blinking dot */
+.blink-me {
+  animation: pulseColor 2s infinite;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #3b82f6; /* Primary blue color */
+  position: relative;
+}
+
+/* Pulsing Dot Animation */
+@keyframes pulseColor {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    background: #3b82f6; /* Primary blue color */
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+    background: #2563eb; /* Lighter blue shade */
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    background: #3b82f6; /* Primary blue color */
+  }
+}
+
+/* Filter styles */
+
+.job-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9fafb; /* Subtle background color */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-filter label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333; /* Darker color for contrast */
+}
+
+.job-filter select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #d1d5db; /* Light border color */
+  font-size: 1rem;
+  color: #333; /* Darker text color */
+  background-color: #ffffff;
+  transition: border-color 0.2s ease-in-out;
+
+  /* Focus state */
+  outline: none;
+}
+
+.job-filter select:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+}

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  @apply transition-colors duration-200;
+}
+
+input {
+  max-height: 2.5rem;
+}
