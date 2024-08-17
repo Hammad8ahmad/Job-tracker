@@ -4,6 +4,8 @@ import JobForm from "../components/JobForm";
 import JobDetails from "../components/JobDetails";
 import MoonLoader from "react-spinners/MoonLoader";
 
+// Home component
+
 const Home = () => {
   const { data: jobs, error, isLoading } = useFetchJobs();
   const scrollRef = useRef(null);
