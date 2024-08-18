@@ -5,17 +5,32 @@ import { useThemeContext } from "../hooks/useThemeContext";
 const Navbar = () => {
   const { isDarkMode, toggleTheme } = useThemeContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation(); // Get current location
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const getBlinkClass = () => {
-    return isDarkMode ? "blink-me-2" : "blink-me";
-  };
-  const checking = getBlinkClass();
-  console.log(checking);
+  const getBlinkClass = () => (isDarkMode ? "blink-me-2" : "blink-me");
+
+  const renderNavLink = (path, label) => (
+    <Link
+      to={path}
+      className={`py-2 px-4 transition-colors ${
+        location.pathname === path
+          ? "text-blue-700 dark:text-yellow-300"
+          : "hover:text-blue-700 dark:hover:text-yellow-300"
+      }`}
+    >
+      {label}
+      <span
+        className={
+          location.pathname === path ? `${getBlinkClass()} ml-1.5` : "hidden"
+        }
+      ></span>
+    </Link>
+  );
+
   return (
     <nav className="bg-white text-gray-800 shadow-md dark:bg-neutral-900 dark:text-gray-200">
       <div className="container mx-auto flex justify-between items-center p-4">
@@ -64,57 +79,9 @@ const Navbar = () => {
           >
             {isDarkMode ? "Light" : "Dark"}
           </button>
-          <Link
-            to="/"
-            className={`py-2 px-4 transition-colors ${
-              location.pathname === "/"
-                ? "text-blue-700 dark:text-yellow-300"
-                : "hover:text-blue-700 dark:hover:text-yellow-300"
-            }`}
-          >
-            Home
-            <span
-              className={
-                location.pathname === "/"
-                  ? `${getBlinkClass()} ml-1.5`
-                  : "hidden"
-              }
-            ></span>
-          </Link>
-          <Link
-            to="/jobs"
-            className={`py-2 px-4 transition-colors ${
-              location.pathname === "/jobs"
-                ? "text-blue-700 dark:text-yellow-300"
-                : "hover:text-blue-700 dark:hover:text-yellow-300"
-            }`}
-          >
-            Jobs
-            <span
-              className={
-                location.pathname === "/jobs"
-                  ? `${getBlinkClass()} ml-1.5`
-                  : "hidden"
-              }
-            ></span>
-          </Link>
-          <Link
-            to="/about"
-            className={`py-2 px-4 transition-colors ${
-              location.pathname === "/about"
-                ? "text-blue-700 dark:text-yellow-300"
-                : "hover:text-blue-700 dark:hover:text-yellow-300"
-            }`}
-          >
-            About
-            <span
-              className={
-                location.pathname === "/about"
-                  ? `${getBlinkClass()} ml-1.5`
-                  : "hidden"
-              }
-            ></span>
-          </Link>
+          {renderNavLink("/", "Home")}
+          {renderNavLink("/jobs", "Jobs")}
+          {renderNavLink("/about", "About")}
         </div>
       </div>
     </nav>

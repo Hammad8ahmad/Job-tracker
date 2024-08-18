@@ -8,18 +8,22 @@ import { useThemeContext } from "./hooks/useThemeContext";
 
 function App() {
   const { isDarkMode } = useThemeContext();
+
+  // Determine the theme class based on dark mode status
+  const themeClass = isDarkMode ? "dark" : "light";
+
   return (
-    <div className={isDarkMode ? "dark" : "light"}>
+    <div className={themeClass}>
       <div className="App">
         <BrowserRouter>
           <Navbar />
-          <div className="pages pt-4 px-4 md:px-0 lg:px-0 bg-gray-100 dark:bg-gray-900 ">
+          <main className="pages pt-4 px-4 md:px-0 lg:px-0 bg-gray-100 dark:bg-gray-900">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/jobs" element={<Jobs />} />
             </Routes>
-          </div>
+          </main>
         </BrowserRouter>
       </div>
     </div>

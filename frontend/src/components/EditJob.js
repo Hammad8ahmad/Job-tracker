@@ -1,6 +1,23 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 
+// Function to update the job
+const updateJob = async (job_id, updatedJob) => {
+  const response = await fetch(`http://localhost:5000/jobs/${job_id}`, {
+    method: "PATCH",
+    body: JSON.stringify(updatedJob),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to update the job");
+  }
+
+  return response.json();
+};
+
 const EditJob = ({ job, onClose }) => {
   const [company, setCompany] = useState(job.company);
   const [position, setPosition] = useState(job.position);
@@ -9,25 +26,8 @@ const EditJob = ({ job, onClose }) => {
   const [type, setType] = useState(job.type);
 
   const queryClient = useQueryClient();
-
-  const editJob = async (updatedJob) => {
-    const response = await fetch(`http://localhost:5000/jobs/${job.job_id}`, {
-      method: "PATCH",
-      body: JSON.stringify(updatedJob),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to update the job");
-    }
-
-    return response.json();
-  };
-
   const mutation = useMutation({
-    mutationFn: editJob,
+    mutationFn: (updatedJob) => updateJob(job.job_id, updatedJob),
     onSuccess: () => {
       queryClient.invalidateQueries(["jobs"]);
       onClose();
@@ -44,27 +44,39 @@ const EditJob = ({ job, onClose }) => {
   };
 
   return (
-    <div className="modal-content dark:bg-neutral-900 dark:text-gray-200">
+    <div className="modal-content dark:bg-neutral-900 dark:text-gray-200 p-6 rounded-lg shadow-lg relative">
       <h3 className="text-lg font-semibold mb-4">Edit Job</h3>
       <form onSubmit={submitHandler} className="space-y-4">
-        <div>
-          <label className="block text-left">Company:</label>
-          <input
-            type="text"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md dark:bg-neutral-800 dark:border-gray-600 dark:text-gray-100"
-          />
-        </div>
-        <div>
-          <label className="block text-left">Position:</label>
-          <input
-            type="text"
-            value={position}
-            onChange={(e) => setPosition(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md dark:bg-neutral-800 dark:border-gray-600 dark:text-gray-100"
-          />
-        </div>
+        {[
+          {
+            label: "Company",
+            value: company,
+            setter: setCompany,
+            type: "text",
+          },
+          {
+            label: "Position",
+            value: position,
+            setter: setPosition,
+            type: "text",
+          },
+          {
+            label: "Location",
+            value: location,
+            setter: setLocation,
+            type: "text",
+          },
+        ].map(({ label, value, setter, type }) => (
+          <div key={label}>
+            <label className="block text-left">{label}:</label>
+            <input
+              type={type}
+              value={value}
+              onChange={(e) => setter(e.target.value)}
+              className="w-full px-4 py-2 border rounded-md dark:bg-neutral-800 dark:border-gray-600 dark:text-gray-100"
+            />
+          </div>
+        ))}
         <div>
           <label className="block text-left">Status:</label>
           <select
@@ -76,15 +88,6 @@ const EditJob = ({ job, onClose }) => {
             <option>Failed</option>
             <option>Pending</option>
           </select>
-        </div>
-        <div>
-          <label className="block text-left">Location:</label>
-          <input
-            type="text"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md dark:bg-neutral-800 dark:border-gray-600 dark:text-gray-100"
-          />
         </div>
         <div>
           <label className="block text-left">Job Type:</label>
