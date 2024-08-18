@@ -11,6 +11,11 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const getBlinkClass = () => {
+    return isDarkMode ? "blink-me-2" : "blink-me";
+  };
+  const checking = getBlinkClass();
+  console.log(checking);
   return (
     <nav className="bg-white text-gray-800 shadow-md dark:bg-neutral-900 dark:text-gray-200">
       <div className="container mx-auto flex justify-between items-center p-4">
@@ -70,7 +75,9 @@ const Navbar = () => {
             Home
             <span
               className={
-                location.pathname === "/" ? "blink-me ml-1.5" : "hidden"
+                location.pathname === "/"
+                  ? `${getBlinkClass()} ml-1.5`
+                  : "hidden"
               }
             ></span>
           </Link>
@@ -85,7 +92,9 @@ const Navbar = () => {
             Jobs
             <span
               className={
-                location.pathname === "/jobs" ? "blink-me ml-1.5" : "hidden"
+                location.pathname === "/jobs"
+                  ? `${getBlinkClass()} ml-1.5`
+                  : "hidden"
               }
             ></span>
           </Link>
@@ -100,7 +109,9 @@ const Navbar = () => {
             About
             <span
               className={
-                location.pathname === "/about" ? "blink-me ml-1.5" : "hidden"
+                location.pathname === "/about"
+                  ? `${getBlinkClass()} ml-1.5`
+                  : "hidden"
               }
             ></span>
           </Link>

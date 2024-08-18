@@ -78,7 +78,7 @@ const JobForm = ({ scrollFunc }) => {
           </label>
           <input
             type="text"
-            className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
+            className="border-2 border-gray-300 dark:border-none rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
             onChange={(e) => setCompany(e.target.value)}
             value={company}
           />
@@ -89,7 +89,7 @@ const JobForm = ({ scrollFunc }) => {
           </label>
           <input
             type="text"
-            className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
+            className="border-2 border-gray-300 dark:border-none rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
             onChange={(e) => setPosition(e.target.value)}
             value={position}
           />
@@ -100,7 +100,7 @@ const JobForm = ({ scrollFunc }) => {
           </label>
           <input
             type="text"
-            className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
+            className="border-2 border-gray-300 dark:border-none rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
             onChange={(e) => setLocation(e.target.value)}
             value={location}
           />
@@ -110,7 +110,7 @@ const JobForm = ({ scrollFunc }) => {
             Status:
           </label>
           <select
-            className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
+            className="border-2 border-gray-300 dark:border-none rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
             onChange={(e) => setStatus(e.target.value)}
             value={status}
           >
@@ -128,7 +128,7 @@ const JobForm = ({ scrollFunc }) => {
             Job Type:
           </label>
           <select
-            className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
+            className="border-2 border-gray-300 dark:border-none rounded-md p-2 focus:border-blue-600 dark:focus:border-blue-400 bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100"
             onChange={(e) => setType(e.target.value)}
             value={type}
           >

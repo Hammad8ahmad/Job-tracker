@@ -29,9 +29,9 @@ body {
   color: #3b82f6; /* Blue color to highlight the number of jobs */
 }
 
-/* Styles for blinking dot */
+/* Styles for blinking dot (LIGHT MODE) */
 .blink-me {
-  animation: pulseColor 2s infinite;
+  animation: pulseColorLight 2s infinite;
   width: 8px;
   height: 8px;
   display: inline-block;
@@ -41,7 +41,7 @@ body {
 }
 
 /* Pulsing Dot Animation */
-@keyframes pulseColor {
+@keyframes pulseColorLight {
   0% {
     transform: scale(1);
     opacity: 1;
@@ -56,6 +56,37 @@ body {
     transform: scale(1);
     opacity: 1;
     background: #3b82f6; /* Primary blue color */
+  }
+}
+
+/* Styles for blinking dot (DARK MODE) */
+
+.blink-me-2 {
+  animation: pulseColorDark 2s infinite;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #facc15; /* Primary yellow color */
+  position: relative;
+}
+
+/* Pulsing Dot Animation */
+@keyframes pulseColorDark {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    background: #facc15; /* Primary yellow color */
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+    background: #eab308; /* Darker yellow shade */
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    background: #facc15; /* Primary yellow color */
   }
 }
 
