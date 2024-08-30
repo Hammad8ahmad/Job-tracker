@@ -4,6 +4,7 @@ import { format } from "date-fns";
 import EditJob from "./EditJob";
 
 // Function to delete a job by ID
+
 const deleteJob = async (job_id) => {
   const response = await fetch(`http://localhost:5000/jobs/${job_id}`, {
     method: "DELETE",
