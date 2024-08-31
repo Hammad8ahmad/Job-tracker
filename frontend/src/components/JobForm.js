@@ -1,9 +1,10 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { apiUrl } from "../config";
 
 // Function to post a job to the server
 const postJob = async (job) => {
-  const response = await fetch("http://localhost:5000/jobs", {
+  const response = await fetch(`${apiUrl}/jobs`, {
     method: "POST",
     body: JSON.stringify(job),
     headers: {
