@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { apiUrl } from "../config";
 
 const EditJob = ({ job, onClose }) => {
   const [company, setCompany] = useState(job.company);
@@ -11,7 +12,7 @@ const EditJob = ({ job, onClose }) => {
   const queryClient = useQueryClient();
 
   const editJob = async (updatedJob) => {
-    const response = await fetch(`http://localhost:5000/jobs/${job.job_id}`, {
+    const response = await fetch(`${apiUrl}/jobs/${job.job_id}`, {
       method: "PATCH",
       body: JSON.stringify(updatedJob),
       headers: {

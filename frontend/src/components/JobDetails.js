@@ -2,9 +2,10 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import EditJob from "./EditJob";
 import { useState } from "react";
 import { format } from "date-fns";
+import { apiUrl } from "../config";
 
 const deleteJob = async (job_id) => {
-  const response = await fetch(`http://localhost:5000/jobs/${job_id}`, {
+  const response = await fetch(`${apiUrl}/jobs/${job_id}`, {
     method: "DELETE",
   });
   if (!response.ok) {
