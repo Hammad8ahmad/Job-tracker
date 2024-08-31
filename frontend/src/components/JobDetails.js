@@ -7,7 +7,7 @@ import { apiUrl } from "../config";
 // Function to delete a job by ID
 
 const deleteJob = async (job_id) => {
-  const response = await fetch(`${apiUrl}/jobs/${job_id}`, {
+  const response = await fetch(`${apiUrl}/api/jobs/${job_id}`, {
     method: "DELETE",
   });
   if (!response.ok) {

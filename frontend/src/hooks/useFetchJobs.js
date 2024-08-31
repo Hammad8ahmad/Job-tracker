@@ -5,7 +5,7 @@ import { apiUrl } from "../config";
 const useFetchJobs = () => {
   const fetchJobs = async () => {
     try {
-      const response = await fetch(`${apiUrl}/jobs`);
+      const response = await fetch(`${apiUrl}/api/jobs`);
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.statusText}`);
       }
