@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
+import { apiUrl } from "../config";
 
 // Hook for fetching jobs
 
 const useFetchJobs = () => {
+  console.log(apiUrl);
   const fetchJobs = async () => {
     try {
-      const response = await fetch("http://localhost:5000/jobs");
+      const response = await fetch(`${apiUrl}/jobs`);
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.statusText}`);
       }

@@ -1,9 +1,10 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { apiUrl } from "../config";
 
 // Function to update the job
 const updateJob = async (job_id, updatedJob) => {
-  const response = await fetch(`http://localhost:5000/jobs/${job_id}`, {
+  const response = await fetch(`${apiUrl}/jobs/${job_id}`, {
     method: "PATCH",
     body: JSON.stringify(updatedJob),
     headers: {

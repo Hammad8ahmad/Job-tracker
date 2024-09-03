@@ -11,11 +11,12 @@ app.use(cors());
 app.use(express.json()); // req.body
 
 // Routes
-app.use("/jobs", jobRoutes);
+app.use("/api/jobs", jobRoutes);
 
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   console.log("hammad");
+  console.log("every job");
   next();
 });
 
