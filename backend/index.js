@@ -10,15 +10,14 @@ const jobRoutes = require("./Routes/JobRoutes");
 app.use(cors());
 app.use(express.json()); // req.body
 
-// Routes
-app.use("/api/jobs", jobRoutes);
-
 app.use((req, res, next) => {
   console.log(req.path, req.method);
-  console.log("hammad");
-  console.log("every job");
+  console.log("every job request");
   next();
 });
+
+// Routes
+app.use("/api/jobs", jobRoutes);
 
 // listening to server
 
