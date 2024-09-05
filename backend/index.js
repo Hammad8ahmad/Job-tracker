@@ -7,11 +7,7 @@ const jobRoutes = require("./Routes/JobRoutes");
 
 // Middleware
 
-app.use(
-  cors({
-    origin: "https://railway-deploy--job-tracker-io.netlify.app/",
-  })
-);
+app.use(cors());
 app.use(express.json()); // req.body
 
 app.use((req, res, next) => {
