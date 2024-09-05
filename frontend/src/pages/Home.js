@@ -11,6 +11,7 @@ const Home = () => {
 
   const handleScroll = () => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    console.log(scrollRef.current);
   };
 
   if (isLoading) {
@@ -30,14 +31,14 @@ const Home = () => {
   }
 
   return (
-    <div className="home bg-gray-100 dark:bg-gray-900">
+    <div className="home  bg-gray-100 dark:bg-gray-900">
       <JobForm scrollFunc={handleScroll} />
       <div
-        ref={scrollRef}
+        // ref={scrollRef}
         className="jobs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-[1280px]"
       >
         {jobs?.map((job) => (
-          <JobDetails job={job} key={job.job_id} />
+          <JobDetails scrollRef={scrollRef} job={job} key={job.job_id} />
         ))}
       </div>
     </div>

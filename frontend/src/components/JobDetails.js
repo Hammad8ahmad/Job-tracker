@@ -13,10 +13,11 @@ const deleteJob = async (job_id) => {
   if (!response.ok) {
     throw new Error("Unable to delete the job");
   }
-  return response.json();
+
+  return await response.json();
 };
 
-const JobDetails = ({ job }) => {
+const JobDetails = ({ job, scrollRef }) => {
   const [isEditing, setIsEditing] = useState(false);
   const queryClient = useQueryClient();
   const { company, position, status, job_id, location, type, created_at } = job;
@@ -40,7 +41,10 @@ const JobDetails = ({ job }) => {
 
   return (
     <>
-      <div className="job-card bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 w-full max-w-md mx-auto p-4 sm:p-6 dark:bg-neutral-900 dark:text-gray-200">
+      <div
+        ref={scrollRef}
+        className="job-card bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 w-full max-w-md mx-auto p-4 sm:p-6 dark:bg-neutral-900 dark:text-gray-200"
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
           <div className="flex flex-col">
             <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
@@ -98,7 +102,7 @@ const JobDetails = ({ job }) => {
       {/* Full-screen Modal for Editing */}
       {isEditing && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="modal-content bg-white w-full max-w-lg sm:max-w-xl p-4 sm:p-6 rounded-lg shadow-lg relative dark:bg-neutral-900">
+          <div className="modal-content bg-white w-full max-w-lg sm:max-w-xl p-8 sm:p-6 rounded-lg  relative dark:bg-neutral-900">
             <button
               onClick={toggleEditMode}
               className="close-modal-btn absolute top-2 right-2 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"

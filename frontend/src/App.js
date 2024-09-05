@@ -17,7 +17,7 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <Navbar />
-          <main className="pages pt-4 px-4 md:px-0 lg:px-0 bg-gray-100 dark:bg-gray-900">
+          <main className="pages min-h-screen pt-4 px-4 md:px-0 lg:px-0 bg-gray-100 dark:bg-gray-900">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

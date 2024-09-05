@@ -12,7 +12,7 @@ app.use(express.json()); // req.body
 
 app.use((req, res, next) => {
   console.log(req.path, req.method);
-  console.log("every job request");
+  console.log("//every job request//");
   next();
 });
 
