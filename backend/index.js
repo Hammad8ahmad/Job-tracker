@@ -9,7 +9,7 @@ const jobRoutes = require("./Routes/JobRoutes");
 
 app.use(
   cors({
-    origin: "https://job-tracker-io.netlify.app/",
+    origin: "https://railway-deploy--job-tracker-io.netlify.app/",
   })
 );
 app.use(express.json()); // req.body
