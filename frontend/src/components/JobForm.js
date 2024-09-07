@@ -22,16 +22,16 @@ const JobForm = ({ scrollFunc }) => {
   const queryClient = useQueryClient();
   const [company, setCompany] = useState("");
   const [position, setPosition] = useState("");
-  const [status, setStatus] = useState("Applied");
+  const [status, setStatus] = useState("");
   const [location, setLocation] = useState("");
-  const [type, setType] = useState("Full-time");
+  const [type, setType] = useState("");
   const [isFilled, setIsFilled] = useState(false);
   const [jobCompletion, setJobCompletion] = useState(false);
 
   // Mutation to handle job submission
   const mutation = useMutation({
     mutationFn: postJob,
-    onSuccess: (newJob) => {
+    onSuccess: () => {
       queryClient.invalidateQueries(["jobs"]);
       scrollFunc();
       setCompany("");

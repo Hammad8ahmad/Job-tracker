@@ -55,12 +55,12 @@ const About = () => {
         </h2>
         <ol className="list-decimal pl-6 text-gray-800 leading-relaxed dark:text-gray-400">
           <li>
-            <strong>Explore Job Listings:</strong> Browse through the available
-            job listings posted on our platform.
+            <strong>Post Job Applications:</strong>Post job applications and
+            track them easily.
           </li>
           <li>
-            <strong>Apply Directly:</strong> Find a job that suits you and apply
-            directly using the provided contact information.
+            <strong>Update Job Details:</strong>Update job details with time to
+            keep track of the job status.
           </li>
           <li>
             <strong>Track Applications:</strong> Keep a record of where you have

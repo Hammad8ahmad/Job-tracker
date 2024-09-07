@@ -15,7 +15,7 @@ const useFetchJobs = () => {
       return json;
     } catch (error) {
       console.error("Error fetching jobs:", error);
-      throw error; // Ensure the error is thrown to be caught by `useQuery`
+      throw error;
     }
   };
   return useQuery({ queryKey: ["jobs"], queryFn: fetchJobs });
