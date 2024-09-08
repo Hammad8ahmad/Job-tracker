@@ -18,7 +18,7 @@ const postJob = async (job) => {
   return response.json();
 };
 
-const JobForm = ({ scrollFunc }) => {
+const JobForm = () => {
   const queryClient = useQueryClient();
   const [company, setCompany] = useState("");
   const [position, setPosition] = useState("");
@@ -33,7 +33,7 @@ const JobForm = ({ scrollFunc }) => {
     mutationFn: postJob,
     onSuccess: () => {
       queryClient.invalidateQueries(["jobs"]);
-      scrollFunc();
+
       setCompany("");
       setPosition("");
       setStatus("");

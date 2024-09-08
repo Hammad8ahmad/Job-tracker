@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { format } from "date-fns";
 import EditJob from "./EditJob";
 import { apiUrl } from "../config";
@@ -17,8 +17,9 @@ const deleteJob = async (job_id) => {
   return await response.json();
 };
 
-const JobDetails = ({ job, scrollRef }) => {
+const JobDetails = forwardRef(({ job }, ref) => {
   const [isEditing, setIsEditing] = useState(false);
+
   const queryClient = useQueryClient();
   const { company, position, status, job_id, location, type, created_at } = job;
 
@@ -42,7 +43,7 @@ const JobDetails = ({ job, scrollRef }) => {
   return (
     <>
       <div
-        ref={scrollRef}
+        ref={ref}
         className="job-card bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 w-full max-w-md mx-auto p-4 sm:p-6 dark:bg-neutral-900 dark:text-gray-200"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
@@ -128,6 +129,6 @@ const JobDetails = ({ job, scrollRef }) => {
       )}
     </>
   );
-};
+});
 
 export default JobDetails;
