@@ -101,6 +101,9 @@ Users can switch between light and dark modes using the toggle in the top-right 
 
 ### 🤝 Contributing
 Contributions are always welcome! Follow these steps to contribute:
+## 🤝 Contributing
+
+Contributions are always welcome! Follow these steps to contribute:
 
 1. **Fork the Repository**
 
@@ -110,21 +113,29 @@ Contributions are always welcome! Follow these steps to contribute:
     git checkout -b feature-branch
     ```
 
-3. **Make Your Changes**
-
-4. **Commit Your Changes**
+3. **Make your changes and then commit Your Changes**
 
     ```bash
     git commit -m 'Add a new feature'
     ```
 
-5. **Push to the Branch**
+4. **Push to the Branch**
 
     ```bash
     git push origin feature-branch
     ```
 
-6. **Open a Pull Request**
+5. **Open a Pull Request**
+
+    - Go to the repository on GitHub.
+    - Switch to the **Pull Requests** tab.
+    - Click on the **New Pull Request** button.
+    - Select your branch (e.g., `feature-branch`) from the drop-down menu.
+    - Review your changes and add a description of your pull request.
+    - Click on **Create Pull Request** to submit your changes.
+
+Once your pull request is created, the maintainers will review your changes and provide feedback. Thank you for contributing!
+
 
 ### 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
