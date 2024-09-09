@@ -71,6 +71,7 @@ To set up the project locally, follow these steps:
     cd client
     npm start
     ```
+    
  **Start the Backend**
  Navigate to the server directory and run:
     ```
