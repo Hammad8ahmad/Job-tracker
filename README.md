@@ -104,30 +104,23 @@ Contributions are always welcome! Follow these steps to contribute:
 
 Fork the Repository
 
-Create a New Branch
+**Create a New Branch**
 
-bash
-Copy code
-git checkout -b feature-branch
-Make Your Changes
+ ```bash  git checkout -b feature-branch
 
-Commit Your Changes
+ Make Your Changes
 
-bash
-Copy code
-git commit -m 'Add a new feature'
-Push to the Branch
+**Commit Your Changes**
 
-bash
-Copy code
-git push origin feature-branch
-Open a Pull Request
+ ```bash git commit -m 'Add a new feature'
 
-📝 License
+**Push to the Branch**
+
+ ```bash
+ git push origin feature-branch
+ Open a Pull Request
+
+### 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-📧 Contact
-For any questions or assistance, please contact:
 
-Email: your-email@example.com
-GitHub: your-username
