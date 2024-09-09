@@ -102,23 +102,29 @@ Users can switch between light and dark modes using the toggle in the top-right 
 ### 🤝 Contributing
 Contributions are always welcome! Follow these steps to contribute:
 
-Fork the Repository
+1. **Fork the Repository**
 
-**Create a New Branch**
-    ```bash 
+2. **Create a New Branch**
+
+    ```bash
     git checkout -b feature-branch
     ```
- Make Your Changes
 
-**Commit Your Changes**
-    ```bash 
+3. **Make Your Changes**
+
+4. **Commit Your Changes**
+
+    ```bash
     git commit -m 'Add a new feature'
     ```
-**Push to the Branch**
+
+5. **Push to the Branch**
+
     ```bash
     git push origin feature-branch
-    ``` 
- Open a Pull Request
+    ```
+
+6. **Open a Pull Request**
 
 ### 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
