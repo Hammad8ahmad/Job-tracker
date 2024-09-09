@@ -79,6 +79,7 @@ Ensure you have a .env file set up with your environment variables, including th
 
 ### 🌐 Deployment
 **Frontend:** Deployed on Vercel. [View Live Demo](https://job-tracker-io.vercel.app/)
+
 **Backend:** Deployed on Render. [View API Endpoint](https://job-tracker-production-cb23.up.railway.app/)
 ### 📄 API Endpoints
 The backend API supports the following endpoints:
