@@ -51,7 +51,7 @@ To set up the project locally, follow these steps:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/job-tracker.git
+   git clone https://github.com/Hammad8ahmad/Job-tracker.git
 2. **Navigate to the Project Directory**
    ```bash
    cd job-tracker
@@ -78,7 +78,7 @@ Navigate to the server directory and run:
 Ensure you have a .env file set up with your environment variables, including the database URL and necessary API keys.
 
 ### 🌐 Deployment
-**Frontend:** Deployed on Vercel. View Live Demo
+**Frontend:** Deployed on Vercel. View Live Demo[https://job-tracker-io.vercel.app/]
 **Backend:** Deployed on Render. View API Endpoint
 ### 📄 API Endpoints
 The backend API supports the following endpoints:
