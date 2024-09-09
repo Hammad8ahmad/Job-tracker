@@ -68,8 +68,7 @@ To set up the project locally, follow these steps:
 Navigate to the client directory and run:
     ```bash
     cd client
-    npm start
-    
+    npm start  
 **Start the Backend**
 Navigate to the server directory and run:
     ```bash
@@ -79,6 +78,7 @@ Ensure you have a .env file set up with your environment variables, including th
 
 ### 🌐 Deployment
 **Frontend:** Deployed on Vercel. [View Live Demo](https://job-tracker-io.vercel.app/)
+
 **Backend:** Deployed on Render. [View API Endpoint](https://job-tracker-production-cb23.up.railway.app/)
 ### 📄 API Endpoints
 The backend API supports the following endpoints:
