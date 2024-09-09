@@ -84,9 +84,13 @@ Ensure you have a .env file set up with your environment variables, including th
 The backend API supports the following endpoints:
 
 **GET /api/jobs** - Retrieve all job entries.
+
 **POST /api/jobs** - Add a new job entry.
+
 **PUT /api/jobs/:id** - Update a specific job entry.
+
 **DELETE /api/jobs/:id** - Delete a specific job entry.
+
 ### 📚 Usage
 Adding a Job: Click the "Add Job" button and fill in the form with job details.
 Editing a Job: Click on a job card and use the "Edit" button to modify job information.
