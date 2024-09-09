@@ -14,10 +14,13 @@ A comprehensive job tracking web application designed to help users manage and k
 ## 🖼️ Screenshots
 
 - **Home Page**
+![homeee](https://github.com/user-attachments/assets/0094e66f-1e9d-4f9d-98b5-3397532e4161)
 
-- **Job Form**
+- **Jobs**
+![jobss](https://github.com/user-attachments/assets/b4c68e28-0128-4162-b44c-99a6e9af8a83)
 
-- **Dark Mode**
+- **Light Mode**
+![lightmode](https://github.com/user-attachments/assets/00308de0-d5c6-4ebd-b554-a0e9d7a7ba01)
 
 ## 🛠️ Technologies Used
 
