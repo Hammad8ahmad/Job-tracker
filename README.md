@@ -68,13 +68,15 @@ To set up the project locally, follow these steps:
 ## Start the Frontend
 Navigate to the client directory and run:
 
-    ```bash cd client
+    ```bash 
+    cd client
     npm start
     ```   
 ## Start the Backend
 Navigate to the server directory and run:
 
-    ```bash cd server
+    ```bash 
+    cd server
     npm run dev
     ```   
 Ensure you have a .env file set up with your environment variables, including the database URL and necessary API keys.
