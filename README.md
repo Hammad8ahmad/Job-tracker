@@ -52,59 +52,49 @@ To set up the project locally, follow these steps:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/your-username/job-tracker.git
-Navigate to the Project Directory
-
-bash
-Copy code
+2. **Navigate to the Project Directory**
+```bash
 cd job-tracker
-Install Frontend Dependencies
-
-bash
-Copy code
+3. **Install Frontend Dependencies**
+```bash
 cd client
 npm install
-Install Backend Dependencies
-
-bash
-Copy code
+4. **Install Backend Dependencies**
+```bash
 cd ../server
 npm install
-🔧 Running the Project
-Start the Frontend
+### 🔧 Running the Project
+**Start the Frontend**
 Navigate to the client directory and run:
-
-bash
-Copy code
+```bash
 cd client
 npm start
-Start the Backend
+**Start the Backend**
 Navigate to the server directory and run:
-
-bash
-Copy code
+```bash
 cd server
 npm run dev
 Ensure you have a .env file set up with your environment variables, including the database URL and necessary API keys.
 
-🌐 Deployment
-Frontend: Deployed on Vercel. View Live Demo
-Backend: Deployed on Render. View API Endpoint
-📄 API Endpoints
+### 🌐 Deployment
+**Frontend:** Deployed on Vercel. View Live Demo
+**Backend:** Deployed on Render. View API Endpoint
+### 📄 API Endpoints
 The backend API supports the following endpoints:
 
 GET /api/jobs - Retrieve all job entries.
 POST /api/jobs - Add a new job entry.
 PUT /api/jobs/:id - Update a specific job entry.
 DELETE /api/jobs/:id - Delete a specific job entry.
-📚 Usage
+### 📚 Usage
 Adding a Job: Click the "Add Job" button and fill in the form with job details.
 Editing a Job: Click on a job card and use the "Edit" button to modify job information.
 Deleting a Job: Click on a job card and use the "Delete" button to remove the job.
 Filtering Jobs: Utilize the filter options to search for specific job entries.
-🌓 Dark Mode
+### 🌓 Dark Mode
 Users can switch between light and dark modes using the toggle in the top-right corner. The application saves your preference using local storage.
 
-🤝 Contributing
+### 🤝 Contributing
 Contributions are always welcome! Follow these steps to contribute:
 
 Fork the Repository
