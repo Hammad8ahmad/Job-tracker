@@ -45,19 +45,26 @@ A comprehensive job tracking web application designed to help users manage and k
 
 To set up the project locally, follow these steps:
 
-### Clone the Repository
-```bash
-git clone https://github.com/your-username/job-tracker.git
+### ⚙️ Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/job-tracker.git
 Navigate to the Project Directory
+
 bash
 Copy code
 cd job-tracker
 Install Frontend Dependencies
+
 bash
 Copy code
 cd client
 npm install
 Install Backend Dependencies
+
 bash
 Copy code
 cd ../server
@@ -101,20 +108,26 @@ Users can switch between light and dark modes using the toggle in the top-right 
 Contributions are always welcome! Follow these steps to contribute:
 
 Fork the Repository
+
 Create a New Branch
+
 bash
 Copy code
 git checkout -b feature-branch
 Make Your Changes
+
 Commit Your Changes
+
 bash
 Copy code
 git commit -m 'Add a new feature'
 Push to the Branch
+
 bash
 Copy code
 git push origin feature-branch
 Open a Pull Request
+
 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
@@ -123,4 +136,3 @@ For any questions or assistance, please contact:
 
 Email: your-email@example.com
 GitHub: your-username
-css
