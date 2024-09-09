@@ -106,18 +106,17 @@ Fork the Repository
 
 **Create a New Branch**
 
- ```bash  git checkout -b feature-branch
+      ```bash  git checkout -b feature-branch
 
  Make Your Changes
 
 **Commit Your Changes**
 
- ```bash git commit -m 'Add a new feature'
+      ```bash git commit -m 'Add a new feature'
 
 **Push to the Branch**
 
- ```bash
- git push origin feature-branch
+       ```bash git push origin feature-branch
  Open a Pull Request
 
 ### 📝 License
