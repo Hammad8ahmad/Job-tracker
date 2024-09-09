@@ -70,7 +70,8 @@ To set up the project locally, follow these steps:
   
     ```bash 
     cd client
-    npm start```  
+    npm start
+    ```
   **Start the Backend**
  Navigate to the server directory and run:
  
