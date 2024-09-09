@@ -53,27 +53,27 @@ To set up the project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/job-tracker.git
 2. **Navigate to the Project Directory**
-```bash
-cd job-tracker
+   ```bash
+   cd job-tracker
 3. **Install Frontend Dependencies**
-```bash
-cd client
-npm install
+   ```bash
+   cd client
+   npm install
 4. **Install Backend Dependencies**
-```bash
-cd ../server
-npm install
+   ```bash
+   cd ../server
+   npm install
 ### 🔧 Running the Project
 **Start the Frontend**
 Navigate to the client directory and run:
-```bash
-cd client
-npm start
+   ```bash
+   cd client
+   npm start
 **Start the Backend**
 Navigate to the server directory and run:
-```bash
-cd server
-npm run dev
+   ```bash
+   cd server
+   npm run dev
 Ensure you have a .env file set up with your environment variables, including the database URL and necessary API keys.
 
 ### 🌐 Deployment
