@@ -7,7 +7,11 @@ const jobRoutes = require("./Routes/JobRoutes");
 
 // Middleware
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://job-tracker-io.vercel.app",
+  })
+);
 app.use(express.json()); // req.body
 
 app.use((req, res, next) => {
