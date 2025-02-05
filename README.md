@@ -1,7 +1,9 @@
 # Job Tracking Site
 
 A comprehensive job tracking web application designed to help users manage and keep track of their job applications. The app provides features like adding, editing, deleting, and filtering job entries, making the job search process more organized and efficient.
+
 [DEMO](https://job-tracker-io.vercel.app/)
+
 NOTE : If you cannot see the live version it is probably because my render free tier expired but you can see the live version below and how it worked.
 
 ## 🚀 Features
